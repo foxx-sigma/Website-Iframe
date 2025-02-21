@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier List Character in Wuthering Waves</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+         function handleGetStarted() {
+            window.location.href = "Rangking1.html";
+        }
+        function showMessage(prestasi, url) {
+            let confirmNavigation = confirm('Apakah Anda ingin berpindah ke halaman ' + prestasi + '?');
+            if (confirmNavigation) {
+                console.log("Berpindah ke:", url);
+                window.location.href = url;
+            }
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('bg-gray-800');
+            document.body.classList.toggle('text-white');
+            let elements = document.querySelectorAll('.bg-white, .bg-gray-200');
+            elements.forEach(el => {
+                el.classList.toggle('bg-gray-900');
+                el.classList.toggle('text-white');
+            });
+        }
+
+        function showMore() {
+            let moreAchievements = document.getElementById('moreAchievements');
+            let videoDetails = document.getElementById('videoDetails');
+
+            if (moreAchievements.classList.contains('hidden')) {
+                moreAchievements.classList.remove('hidden');
+                videoDetails.classList.remove('hidden');
+                document.getElementById('showMoreBtn').innerText = 'Sembunyikan';
+            } else {
+                moreAchievements.classList.add('hidden');
+                
+                document.getElementById('showMoreBtn').innerText = 'Lihat Lebih Banyak';
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff;
+        }
+        
+        .neon-border {
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+        }
+        
+        .glowing-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 255, 0.1);
+            filter: blur(5px);
+            z-index: -1;
+        }
+        
+        .cyber-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+     
+    </style>
+</head>
+<body>
+    <video autoplay loop muted class="fixed top-0 left-0 w-full h-full object-cover -z-10">
+        <source src="Vid/Sk.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
+    
+<div class="animated-bg"></div>
+    <header class="bg-black text-white py-4 text-center text-2xl font-bold shadow-md neon-text">
+        
+        Tier List Character in Wuthering Waves
+    </header>
+    </header>
+    
+    <div class="container mx-auto mt-6 p-4">
+        <div class="grid grid-cols-3 gap-4 items-start">
+            <!-- Video Section -->
+            <div class="col-span-2 bg-gradient-to-r from-gray-900 to-gray-700 rounded-lg overflow-hidden shadow-lg p-4 relative">
+                <video class="w-full h-full rounded-lg border-4 border-gray-300 shadow-xl" controls>
+                    <source src="Vid/WuWaTrailer.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <!-- Video Description (Initially Hidden) -->
+                <div id="videoDetails" class="mt-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg transition-all duration-500">
+                    <h3 class="text-xl font-semibold">Tentang Video</h3>
+                    <p class="text-sm mt-2 text-gray-300">Wuthering Waves adalah game aksi RPG open-world yang dikembangkan oleh Kuro Games. Game ini menawarkan eksplorasi dunia luas dengan sistem pertarungan yang dinamis dan cepat, mirip dengan Genshin Impact dan Honkai: Star Rail. Pemain berperan sebagai Rover, seorang karakter yang terbangun di dunia yang telah mengalami bencana besar, dengan misi mengungkap misteri dan menghadapi berbagai musuh kuat.
+
+                        Game ini menampilkan mekanisme combat berbasis skill, dodging, dan counter-attacks, serta sistem Echo, yang memungkinkan pemain menyerap kekuatan musuh untuk digunakan dalam pertempuran. Dengan grafis yang memukau dan alur cerita yang mendalam, Wuthering Waves menjadi salah satu game yang dinantikan dalam genre RPG aksi open-world.</p>
+                </div>
+            </div>
+            
+            <!-- Prestasi List -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg neon-border">
+                <h2 class="text-lg font-semibold neon-text">Top Tier Character :</h2>
+                <ul>
+                    <li class="mb-2 bg-gray-800 p-3 rounded hover:bg-gray-300 cursor-pointer transition-all duration-300 neon-border" onclick="showMessageAndRedirect('Apakah Anda ingin berpindah ke halaman ini?', 'Char1.html')">1.Phoebe        (Spectro Main DPS)</li>
+                    <li class="mb-2 bg-gray-800 p-3 rounded hover:bg-gray-300 cursor-pointer transition-all duration-300 neon-border" onclick="showMessageAndRedirect('Apakah Anda ingin berpindah ke halaman ini?', 'Char2.html')">2.Jinshi        (Spectro Main DPS)</li>
+                    <li class="mb-2 bg-gray-800 p-3 rounded hover:bg-gray-300 cursor-pointer transition-all duration-300 neon-border" onclick="showMessageAndRedirect('Apakah Anda ingin berpindah ke halaman ini?', 'Char3.html')">3.Camellya      (Havoc Main DPS)</li>
+                    <li class="mb-2 bg-gray-800 p-3 rounded hover:bg-gray-300 cursor-pointer transition-all duration-300 neon-border" onclick="showMessageAndRedirect('Apakah Anda ingin berpindah ke halaman ini?', 'Char4.html')">4.Carlotta      (Glacio Main DPS)</li>
+                    <li class="mb-2 bg-gray-800 p-3 rounded hover:bg-gray-300 cursor-pointer transition-all duration-300 neon-border" onclick="showMessageAndRedirect('Apakah Anda ingin berpindah ke halaman ini?', 'Char5.html')">5.Shorekeeper   (Support and Healer)</li>
+                </ul>
+                <button id="showMoreBtn" class="mt-4 px-4 py-2 bg-red-700 text-white rounded shadow hover:bg-red-700 transition-all duration-300" onclick="showMore()">Lihat Lebih Banyak</button>
+                <ul id="moreAchievements" class="hidden mt-4">
+                    <li class="mb-2 bg-gray-200 p-3 rounded hover:bg-gray-300 cursor-pointer transition-all duration-300" onclick="showMessageAndRedirect('Apakah Anda ingin berpindah ke halaman Absen 18?', 'Absen18.html')">18.Kirana Salsa Prila Noritantia </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showMessageAndRedirect(message, url) {
+          alert(message); // Tampilkan pesan
+          window.location.href = url; // Arahkan ke halaman
+        }
+        
+      </script>
+    <footer class="mt-6 bg-transparent text-white py-3 text-center shadow-md">
+        🌟 Selamat Datang di Website Aesar Sigma 🌟
+    </footer>
+</body>
+</html>
